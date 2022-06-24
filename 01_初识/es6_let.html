@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>let</title>
+    <style>
+        div .item {
+            width: 100px;
+            height: 50px;
+            border: 1px solid black;
+            display: block;
+            float: left;
+
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="container">
+        <h2 class="page-header">点击切换颜色</h2>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+    </div>
+
+
+    <script type="text/javascript">
+        // 获取div元素对象
+        let items = document.getElementsByClassName('item');
+
+        //  for(var i=0;i<items.length;i++){
+        //      items[i].onclick=function(){
+        // //  this.style.background='pink';
+        // items[i].style.background='pink';
+        //      }
+
+        //  }
+
+        // 遍历并绑定事件
+        for (let i = 0; i < items.length; i++) {
+            items[i].onclick = function () {
+                //  修改当前元素的背景颜色
+                //   this.style.background='pink';
+                items[i].style.background = 'pink';
+            }
+
+        }
+        // 声明变量
+        let a;
+        let d, b, c;
+        let e = 100;
+        let f = 520, g = 'eee', y = [];
+        // 1.变量不能重复声明
+        // let  star='11';
+        // let  star='22';//var可以
+        // 2.块级作用域 全局，函数，eval
+        // if elae while for
+        // {
+        //    let girl='nvhhai';
+        // }
+        //     console.log(girl);   
+
+        // 3.不存在变量使用
+        // console.log(song);
+        // let song='aaa';
+
+        // 4.影响作用域链,虽然是块级作用域，但不影响作用链使用效果
+
+        {
+            let school = 'nihao';
+            function fn() {
+                console.log(school);
+            }
+            fn();
+        }
+    </script>
+
+
+</body>
+
+</html>
